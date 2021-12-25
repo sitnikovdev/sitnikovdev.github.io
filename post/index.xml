@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on Oleg Sitnikov</title>
     <link>https://sitnikovdev.github.io/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on Oleg Sitnikov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Dec 2021 12:38:18 +0300</lastBuildDate><atom:link href="https://sitnikovdev.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Dec 2021 01:02:16 +0300</lastBuildDate><atom:link href="https://sitnikovdev.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://sitnikovdev.github.io/post/my-first-post/</link>
-      <pubDate>Thu, 23 Dec 2021 12:38:18 +0300</pubDate>
+      <title>Проектируем UI декларативно с SwiftUI. В чем отличия UIKit и SwiftUI</title>
+      <link>https://sitnikovdev.github.io/post/swiftui-intro/</link>
+      <pubDate>Sun, 26 Dec 2021 01:02:16 +0300</pubDate>
       
-      <guid>https://sitnikovdev.github.io/post/my-first-post/</guid>
-      <description>&lt;h1 id=&#34;descriptive-text-here&#34;&gt;Descriptive text here&amp;hellip;&lt;/h1&gt;</description>
+      <guid>https://sitnikovdev.github.io/post/swiftui-intro/</guid>
+      <description>&lt;h2 id=&#34;отличия-swiftui-от-swift&#34;&gt;Отличия SwiftUI от Swift&lt;/h2&gt;
+&lt;p&gt;Использует декларативный подход. Пишем что хотим получить какую-нибудь схему, а     движок по возможности делает или не делает это.&lt;/p&gt;
+&lt;h2 id=&#34;проблема-вложенных-вью&#34;&gt;Проблема вложенных вью&lt;/h2&gt;
+&lt;p&gt;Главной проблемой является то, что во многих компонентах, в частности в TabView все вью создаются даже если на них нет перехода. Это решается созданием обертки - LazyView.&lt;/p&gt;
+&lt;h2 id=&#34;data-flow&#34;&gt;Data Flow&lt;/h2&gt;
+&lt;p&gt;SwiftUI использует State (Flux,Redux, MobX).
+Поток данных в одном направлении. От пользователя к UI.&lt;/p&gt;
+&lt;h2 id=&#34;property-wrappers&#34;&gt;Property Wrappers&lt;/h2&gt;
+&lt;p&gt;Паттерн Декоратор.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;@ObservableObject - каждый раз пересоздается когда вью обновляется.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;@StateObject - живет дольше чем вью которое им владеет. Из-за этого могут быть баги.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;@EnvironmentObject нельзя делать присвоение (как в @Binding)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;must-have-практики&#34;&gt;Must have практики&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Хорошая практика написание отдельных компонентов. Тем самым уменьшается работа    рендера, движка SwiftUI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Избегать вложенных Navigation view.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

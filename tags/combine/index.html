@@ -28,9 +28,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Combine" />
+    <meta property="og:title" content="Combine" />
+    <meta property="twitter:title" content="Combine" />
     
 
     
@@ -47,9 +47,9 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Posts-</title>
+    <title>Combine-</title>
 
-    <link rel="canonical" href="/post/">
+    <link rel="canonical" href="/tags/combine/">
 
     <link rel="stylesheet" href="/css/iDisqus.min.css"/>
 	
@@ -167,38 +167,101 @@
 
 
 
-
-<article>
-    <div class="container">
-        <div class="row">
+  
+<div class="container">
+    <div class="row">
+        
+        
+   	    <div class="
+            col-lg-8 col-lg-offset-1
+            col-md-8 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            post-container
+        ">
             
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
 
-         	
-                
-<div id="disqus-comment"></div>
+<div class="post-preview">
+    <a href="https://sitnikovdev.github.io/post/swiftui-intro/">
+        <h2 class="post-title">
+            Проектируем UI декларативно с SwiftUI. В чем отличия UIKit и SwiftUI
+        </h2>
+	
+        <div class="post-content-preview">
+	    
+            <h2 id="отличия-swiftui-от-swift">Отличия SwiftUI от Swift</h2>
+<p>Использует декларативный подход. Пишем что хотим получить какую-нибудь схему, а     движок по возможности делает или не делает это.</p>
+<h2 id="проблема-вложенных-вью">Проблема вложенных вью</h2>
+<p>Главной проблемой является то, что во многих компонентах, в частности в TabView все вью создаются даже если на них нет перехода. Это решается созданием обертки - LazyView.</p>
+<h2 id="data-flow">Data Flow</h2>
+<p>SwiftUI использует State (Flux,Redux, MobX).
+Поток данных в одном направлении. От пользователя к UI.</p>
+<h2 id="property-wrappers">Property Wrappers</h2>
+<p>Паттерн Декоратор.</p>
+<ul>
+<li>
+<p>@ObservableObject - каждый раз пересоздается когда вью обновляется.</p>
+</li>
+<li>
+<p>@StateObject - живет дольше чем вью которое им владеет. Из-за этого могут быть баги.</p>
+</li>
+<li>
+<p>@EnvironmentObject нельзя делать присвоение (как в @Binding)</p>
+</li>
+</ul>
+<h2 id="must-have-практики">Must have практики</h2>
+<ul>
+<li>
+<p>Хорошая практика написание отдельных компонентов. Тем самым уменьшается работа    рендера, движка SwiftUI.</p>
+</li>
+<li>
+<p>Избегать вложенных Navigation view.</p>
+</li>
+</ul>
+        
+       
 
-
-
-            </div>
-            
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                
-                
-
-                
-                
-            </div>
         </div>
-    </div>
-</article>
+    </a>
+    <p class="post-meta">
+    Posted by Oleg Sitnikov Sunday, December 26, 2021
+    
+    
+    </p>
+
+</div>
+<hr>
+
+
+            
+
+
+
+       	</div>
+        
+
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+    
+
+    
+	
+    
+    
+
+    
+    
+</div>
+
+	</div>
+</div>
+
 
 
 
